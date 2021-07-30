@@ -1,0 +1,17 @@
+#under-construction {
+    &:after {
+        z-index: -100;
+        content: '';
+        opacity : 0.3;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: url('/storage/biel-altstadt.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        @include background-size(cover);
+    }
+}

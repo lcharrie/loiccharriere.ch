@@ -1,17 +1,70 @@
 const mix = require('laravel-mix');
+var path = require('path');
 
 /*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel applications. By default, we are compiling the CSS
- | file for the application as well as bundling up all the JS files.
- |
- */
+|--------------------------------------------------------------------------
+| Mix Asset Management
+|--------------------------------------------------------------------------
+|
+| Mix provides a clean, fluent API for defining some Webpack build steps
+| for your Laravel application. By default, we are compiling the Sass
+| file for the application as well as bundling up all the JS files.
+|
+*/
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix
+    .autoload({
+        'jquery': [
+            '$', 'window.$', 'jQuery', 'window.jQuery'
+        ]
+    })
+
+    .sass('resources/sass/app.scss', 'public/css')
+
+    .js('resources/js/app.js', 'public/js')
+
+    .alias({
+        '@sass': path.resolve(__dirname, 'resources/sass/'),
+        '@js': path.resolve(__dirname, 'resources/js/')
+    })
+
+    .options({
+        processCssUrls: true,
+    })
+
+    .purifyCss(true)
+
+    .extract(['lodash', 'jquery'])
+    .sourceMaps()
+
+    .browserSync({
+        proxy: 'lvh.me:8000'
+    });
+
+//Foundation Site 6 is not ES5 ready
+mix
+    .webpackConfig({
+        module: {
+            rules: [
+                {
+                    test: /\.jsx?$/,
+                    exclude: /node_modules(?!\/foundation-sites)|bower_components/,
+                    use: [
+                        {
+                            loader: 'babel-loader',
+                            options: Config.babel()
+                        }
+                    ]
+                }
+            ]
+        },
+        resolve: {
+            fallback: {
+                "path": require.resolve("path-browserify")
+            }
+        },
+    });
+
+if (mix.inProduction()) {
+    mix.version();
+}
