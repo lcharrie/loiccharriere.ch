@@ -1,3 +1,15 @@
+:root {
+    --size: 1.1;
+    --color: $ubuntu--white;
+    --background: $ubuntu--black;
+    --link-color: $ubuntu--cyan;
+    --font: $body-font-family;
+    --error-color: #de382b;
+    @include breakpoint(medium) {
+        --size: 1.25;
+    }
+}
+
 .terminal {
     text-shadow: none;
     height: 100vh;

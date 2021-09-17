@@ -19,11 +19,9 @@ $(function() {
         }).then(function() {
             shell.echo('2019-Current');
             shell.echo($("<span class='strong'>co-founder Argon Studio snc</span>"));
-            setTimeout(() => {
-                shell.echo('As co-director and main work force, I am confronted with all the challenges of starting a company, from production to business strategy, promotion, accounting and annual reports. I develop mobile applications allowing users to discover plans of apartments and buildings in 3D though augmented reality, as well as low cost virtual reality immersion using Google Cardboard. I support different actors in the field of architecture and real estate in their creation and promotion process. I also conducted workshops on the creation of artworks in augmented reality for students at the HES-SO.');
-                resolve('$');
-            }, 100);
+            return new Promise((resolve, reject) => {setTimeout(() => resolve(), 50);});
         }).then(function() {
+            shell.echo('As co-director and main work force, I am confronted with all the challenges of starting a company, from production to business strategy, promotion, accounting and annual reports. I develop mobile applications allowing users to discover plans of apartments and buildings in 3D though augmented reality, as well as low cost virtual reality immersion using Google Cardboard. I support different actors in the field of architecture and real estate in their creation and promotion process. I also conducted workshops on the creation of artworks in augmented reality for students at the HES-SO.');
             return new Promise((resolve, reject) => {setTimeout(() => resolve('$'), 200);});
         }),
         projects: () => new Promise((resolve, reject) => {
