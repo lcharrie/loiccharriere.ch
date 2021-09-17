@@ -14,5 +14,8 @@ use App\Http\Controllers\SiteController;
 |
 */
 
-Route::get('/', [SiteController::class, 'welcome'])->name('welcome');
-Route::get('/resume', [SiteController::class, 'resume'])->name('resume');
+Route::get('/', function() {
+    return redirect()->route('resume');
+})->name('welcome');
+Route::get('/resume/', [SiteController::class, 'resume'])->name('resume');
+Route::get('/resume/{version}', [SiteController::class, 'pdf']);

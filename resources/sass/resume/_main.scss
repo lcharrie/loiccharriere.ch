@@ -1,0 +1,42 @@
+.terminal {
+    text-shadow: none;
+    height: 100vh;
+    padding: 0;
+    a:hover {
+        color: $ubuntu--black;
+        background-color: $ubuntu--cyan;
+    }
+    a.simple {
+        color: $ubuntu--white;
+        &:hover {
+            color: inherit;
+            background-color: inherit;
+        }
+    }
+    .section-header {
+        text-transform: uppercase;
+        //font-weight: bold;
+        color: #ffc709;
+    }
+    .strong {
+        text-transform: uppercase;
+        color: $ubuntu--bright-magenta;
+    }
+    .btn-cmd {
+        color: $ubuntu--white;
+        cursor: pointer;
+        &:hover {
+            color: $ubuntu--black;
+            background-color: $ubuntu--white;
+        }
+    }
+    .error {
+        color: $ubuntu--red;
+    }
+}
+
+.terminal .terminal-output {
+    :not(.raw) > div, .cmd div {
+        line-height: normal !important;
+    }
+}

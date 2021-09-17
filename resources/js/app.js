@@ -1,1 +1,1 @@
-require('./foundation');
+require('./foundation.js');

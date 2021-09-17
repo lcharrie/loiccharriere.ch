@@ -1,0 +1,26 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600;700&family=Ubuntu+Mono:wght@400;700&display=swap');
+
+// CSS NORMALIZE
+@import 'node_modules/normalize.css/normalize';
+
+// FONDATION SITES
+@import 'resume/settings';
+@import 'node_modules/foundation-sites/assets/foundation';
+
+// JQUERY terminal
+.terminal {
+    --color: #cccccc;
+    --background: #010101;
+    --link-color: #00cdcd;
+    --size: 1.25;
+    --font: $body-font-family;
+    --error-color: #de382b;
+}
+@import 'node_modules/jquery.terminal/css/jquery.terminal.min';
+
+// MIXINS
+@import 'mixins';
+
+// STYLESHEETS
+@import 'resume/main';

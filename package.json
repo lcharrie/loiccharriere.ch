@@ -10,17 +10,18 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "axios": "^0.21",
+        "axios": "^0.21.4",
         "browser-sync": "^2.27.4",
         "browser-sync-webpack-plugin": "^2.3.0",
-        "foundation-sites": "^6.6.3",
+        "foundation-sites": "^6.7.2",
         "jquery": "^3.6.0",
-        "laravel-mix": "^6.0.6",
+        "jquery.terminal": "^2.29.2",
+        "laravel-mix": "^6.0.31",
         "lodash": "^4.17.19",
         "normalize.css": "^8.0.1",
         "postcss": "^8.1.14",
         "resolve-url-loader": "^4.0.0",
-        "sass": "^1.36.0",
+        "sass": "^1.41.1",
         "sass-loader": "^12.1.0",
         "what-input": "^5.2.10"
     },

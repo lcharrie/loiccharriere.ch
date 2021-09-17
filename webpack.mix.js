@@ -20,8 +20,10 @@ mix
     })
 
     .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/resume.scss', 'public/css')
 
     .js('resources/js/app.js', 'public/js')
+    .js('resources/js/resume.js', 'public/js')
 
     .alias({
         '@sass': path.resolve(__dirname, 'resources/sass/'),
