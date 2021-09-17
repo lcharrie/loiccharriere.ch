@@ -36,26 +36,26 @@
         </template>
         <template id='cmd-contact'>
             <div class="grid-x">
-                <div class="cell medium-3">
+                <span class="cell medium-3">
                     Software_Engineer<br>
                     <a class='simple' href='mailto:loic.charriere@ik.me'>loic.charriere@ik.me</a>
-                </div>
-                <div class="cell medium-3">
+                </span>
+                <span class="cell medium-3">
                     <a class='simple' href='tel:0041795788641'>0795788641</a><br>
                     2502 Biel/Bienne
-                </div>
-                <div class="cell medium-3">
+                </span>
+                <span class="cell medium-3">
                     <a href="https://www.linkedin.com/in/loiccharriere/" target="_blank">/in/loiccharriere/</a><br>
                     <a href="https://github.com/lcharrie" target="_blank">github.com/lcharrie</a>
-                </div>
+                </span>
             </div>
         </template>
         <template id='cmd-skills'>
             <div class="grid-x">
-                <div class="cell small-5 medium-2">C#<br>Python<br>Unity3D<br>Vuforia</div>
-                <div class="cell small-5 medium-2">HTML5<br>CSS<br>PHP<br>JavaScript</div>
-                <div class="cell small-5 medium-2">jQuery<br>MySQL<br>Laravel<br>VueJS</div>
-                <div class="cell small-5 medium-2">Java<br>Git<br>Scrum</div>
+                <span class="cell small-5 medium-2">Java<br>C#<br>Python<br>Unity3D</span>
+                <span class="cell small-5 medium-2">Vuforia<br>Git<br>Scrum</span>
+                <span class="cell small-5 medium-2">HTML5<br>CSS<br>PHP<br>JavaScript</span>
+                <span class="cell small-5 medium-2">jQuery<br>MySQL<br>Laravel<br>VueJS</span>
             </div>
         </template>
         <template id='cmd-languages'>
@@ -67,24 +67,24 @@
         </template>
         <template id='cmd-list'>
             <div class="grid-x grid-padding-x">
-                <div class="cell medium-4">
+                <span class="cell medium-4">
                     <button class='btn-cmd' data-cmd='clear'>clear</button><br>
                     <div>compile [<button class='btn-cmd' data-cmd='compile classic'>classic</button>|<button class='btn-cmd' data-cmd='compile dark'>dark</button>|<button class='btn-cmd' data-cmd='compile light'>light</button>]
                     </div>
                     <button class='btn-cmd' data-cmd='contact'>contact</button><br>
                     <button class='btn-cmd' data-cmd='education'>education</button>
-                </div>
-                <div class="cell medium-4">
+                </span>
+                <span class="cell medium-4">
                     <button class='btn-cmd' data-cmd='experience'>experience</button><br>
                     <button class='btn-cmd' data-cmd='help'>help</button><br>
                     <button class='btn-cmd' data-cmd='interests'>interests</button><br>
                     <button class='btn-cmd' data-cmd='languages'>languages</button>
-                </div>
-                <div class="cell medium-4">
+                </span>
+                <span class="cell medium-4">
                     <button class='btn-cmd' data-cmd='projects'>projects</button><br>
                     <button class='btn-cmd' data-cmd='resume'>resume</button><br>
                     <button class='btn-cmd' data-cmd='skills'>skills</button>
-                </div>
+                </span>
             </div>
         </template>
 

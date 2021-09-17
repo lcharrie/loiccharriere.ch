@@ -156,10 +156,7 @@ $(function() {
     }, {
         checkArity: false,
         completion: true,
-        greetings: function() {
-            this.echo($('#greetings').html());
-            this.echo('Hello I’m Loïc Charrière. After my studies, I founded my start-up with an architect friend in the field of augmented reality. I enjoy the raw beauty of clean and optimized code, and the satisfaction of seeing my work exceed my client’s expectations.\n');
-        },
+        greetings: $('#greetings').html() + '\nHello I’m Loïc Charrière. After my studies, I founded my start-up with an architect friend in the field of augmented reality. I enjoy the raw beauty of clean and optimized code, and the satisfaction of seeing my work exceed my client’s expectations.\n',
         prompt: '[[b;#39b54a;]loiccharriere@127.0.0.1:/home/loic] $ ',
         onClear: function() {
             setTimeout(() => {
@@ -174,7 +171,7 @@ $(function() {
         },
         keydown: function(e, term) {
             if (animation) {return false;}
-        }
+        },
     });
 
     shell.exec('help', true);
