@@ -109,10 +109,10 @@ $(function() {
             shell.echo($("<span class='section-header'>interests</span>"));
             setTimeout(() => resolve(), 100);
         }).then(function(result) {
-            shell.echo('Clarinet since I was 8 - Ensemble Clarmonics, Musique des Jeunes de Bienne');
+            shell.echo('Clarinet since I was 8 - Ensemble Clarmonics');
             shell.echo('Badminton - Committee & Club Treasurer');
             shell.echo('Politics - Les Vert·e·s, member and city council candidate');
-            shell.echo('PC gaming (mostly MMORPG)');
+            shell.echo('PC gaming');
             shell.echo('[x] Through several community engagements, I have acquired a solid experience in planning and managing large projects');
             return new Promise((resolve, reject) => {setTimeout(() => resolve('$'), 200);});
         }),
@@ -134,7 +134,7 @@ $(function() {
             }
         },
         help: () => new Promise((resolve, reject) => {
-            shell.echo("Last updated on 16 September 2021.");
+            shell.echo("Last updated on 15 February 2022.");
             shell.echo($("<div>Type '<button class='btn-cmd' data-cmd='resume'>resume</button>' to view all.</div>"));
             shell.echo($("<div>Type 'compile [<button class='btn-cmd' data-cmd='compile classic'>classic</button>|<button class='btn-cmd' data-cmd='compile dark'>dark</button>|<button class='btn-cmd' data-cmd='compile light'>light</button>]' to view the PDF version.</div>"));
             shell.echo($("<div>Type '<button class='btn-cmd' data-cmd='help'>help</button>' to view this list.</div>"));
